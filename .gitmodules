@@ -1,0 +1,3 @@
+[submodule "lib/vendor/spyc"]
+	path = lib/vendor/spyc
+	url = git://repo.or.cz/spyc.git
