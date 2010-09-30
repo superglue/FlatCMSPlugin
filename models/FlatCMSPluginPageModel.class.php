@@ -4,7 +4,7 @@ class FlatCMSPluginPageModel
 {
   public static function getPagePath($path)
   {
-    $filepath = sgConfiguration::getPath('settings.FlatCMSPlugin.data_dir') . $path;
+    $filepath = sgConfiguration::get('settings.FlatCMSPlugin.data_dir') . $path;
     if (sgToolkit::checkFileLocation($filepath, $path))
     {
       if (file_exists("$filepath.yml"))

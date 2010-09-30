@@ -9,7 +9,7 @@ class FlatCMSPluginConfiguration
   
   public static function install()
   {
-    sgToolkit::mkdir(sgConfiguration::getPath('settings.FlatCMSPlugin.data_dir'));
+    sgToolkit::mkdir(sgConfiguration::get('settings.FlatCMSPlugin.data_dir'));
   }
   
   public static function uninstall()
@@ -19,6 +19,6 @@ Are you you want to uninstall this plugin? Doing this will remove
 all of your cms data in the project_root/data/flatcms directory!
 END;
     sgCLI::confirm($message);
-    sgToolkit::rmdir(sgConfiguration::getPath('settings.FlatCMSPlugin.data_dir'));
+    sgToolkit::rmdir(sgConfiguration::get('settings.FlatCMSPlugin.data_dir'));
   }
 }
